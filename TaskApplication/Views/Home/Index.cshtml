@@ -2,8 +2,126 @@
     ViewData["Title"] = "Home Page";
 }
 
-
-<div> 
-    <a asp-controller="Home" asp-action="AddTask"> Add Task </a> 
+<div class="text-end my-3">
+    <a asp-controller="Home" asp-action="AddTask" class="btn btn-primary">Add Task</a>
 </div>
+
+<div class="matrix-container">
+    <div class="matrix-header">
+        Time Management Matrix
+    </div>
+    <div class="row">
+        <div class="col-6 quadrant important">
+            <div class="quadrant-header">
+                <span class="quadrant-number">1</span> URGENT
+            </div>
+            <div class="quadrant-content">
+                <ul>
+                    <li>crises</li>
+                    <li>emergencies</li>
+                    <!-- ... other items ... -->
+                </ul>
+            </div>
+        </div>
+        <div class="col-6 quadrant urgent">
+            <div class="quadrant-header">
+                <span class="quadrant-number">2</span> NOT URGENT
+            </div>
+            <div class="quadrant-content">
+                <ul>
+                    <li>preparation, planning</li>
+                    <li>relationship building</li>
+                    <!-- ... other items ... -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 quadrant not-important">
+            <div class="quadrant-header">
+                <span class="quadrant-number">3</span> NOT IMPORTANT
+            </div>
+            <div class="quadrant-content">
+                <ul>
+                    <li>interruptions</li>
+                    <li>some mail</li>
+                    <!-- ... other items ... -->
+                </ul>
+            </div>
+        </div>
+        <div class="col-6 quadrant not-urgent">
+            <div class="quadrant-header">
+                <span class="quadrant-number">4</span> NOT URGENT
+            </div>
+            <div class="quadrant-content">
+                <ul>
+                    <li>trivial activities</li>
+                    <li>time wasters</li>
+                    <!-- ... other items ... -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Styles {
+    <style>
+        .matrix-container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .matrix-header {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .quadrant {
+            position: relative;
+            border: 1px solid #000;
+            margin-bottom: -1px;
+        }
+
+        .quadrant-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: white;
+            padding: 0 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .quadrant-number {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .quadrant-content {
+            padding: 40px 20px 20px;
+        }
+
+        .important {
+            background-color: #FFEB3B;
+        }
+        /* yellow */
+        .not-important {
+            background-color: #4CAF50;
+        }
+        /* green */
+        .urgent {
+            background-color: #F44336;
+        }
+        /* red */
+        .not-urgent {
+            background-color: #2196F3;
+        }
+        /* blue */
+    </style>
+}
+
+
+
 
