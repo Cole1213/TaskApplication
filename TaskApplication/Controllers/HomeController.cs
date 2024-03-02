@@ -10,5 +10,10 @@ namespace TaskApplication.Controllers
         {
             return View();
         }
+        public IActionResult FillTaskApplication()
+        {
+            return View("TaskApplication");
+        }
+
     }
 }
