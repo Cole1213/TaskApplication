@@ -36,7 +36,7 @@ namespace TaskApplication.Controllers
             }
             else
             {
-                //ViewBag.Categories = _context.Categories.ToList();
+                ViewBag.Categories = _repo.Categories.ToList();
 
                 return View("TaskApplication", response);
             }

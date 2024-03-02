@@ -12,6 +12,7 @@ namespace TaskApplication.Models
         }
 
         public List<Task> Tasks => _taskContext.Tasks.ToList();
+        public List<Category> Categories => _taskContext.Categories.ToList();
 
         public void AddTask(Task task)
         {
