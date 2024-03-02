@@ -8,5 +8,7 @@
         public void AddTask(Task task);
 
         public void UpdateTask(Task task);
+
+        public void DeleteTask(Task task);
     }
 }

@@ -68,5 +68,21 @@ namespace TaskApplication.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var recordToDelete = _repo.Tasks.Single(y => y.TaskID == id);
+
+            return View(recordToDelete);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Models.Task movie)
+        {
+            _repo.DeleteTask(movie);
+
+            return RedirectToAction("Index");
+        }
     }
 }
