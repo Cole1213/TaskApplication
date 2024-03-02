@@ -88,3 +88,58 @@ form label {
     background-color: #00ab66;
     color: #fff;
 }
+
+.confirmation-form {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Align content horizontally */
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center; /* Center child elements horizontally */
+}
+
+    .confirmation-form h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .confirmation-form form {
+        display: flex;
+        flex-direction: column; /* Stack child elements vertically */
+        align-items: center; /* Center child elements horizontally */
+    }
+
+    .confirmation-form .button-container {
+        display: flex;
+        flex-direction: column; /* Stack child elements vertically */
+    }
+
+    .confirmation-form .delete-btn,
+    .confirmation-form .cancel-btn {
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 10px; /* Add vertical spacing between buttons */
+    }
+
+    .confirmation-form .delete-btn {
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+    }
+
+    .confirmation-form .cancel-btn {
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+    }
+
+        .confirmation-form .cancel-btn:hover {
+            background-color: #0056b3;
+        }

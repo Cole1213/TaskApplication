@@ -25,5 +25,11 @@ namespace TaskApplication.Models
             _taskContext.Tasks.Update(task);
             _taskContext.SaveChanges();
         }
+
+        public void DeleteTask(Task task)
+        {
+            _taskContext.Tasks.Remove(task);
+            _taskContext.SaveChanges();
+        }
     }
 }
