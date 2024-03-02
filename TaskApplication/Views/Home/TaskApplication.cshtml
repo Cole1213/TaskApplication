@@ -4,4 +4,44 @@
 @{
 }
 
+@model Application
+
 <h1>Add Task</h1>
+<form>
+    <label asp-for="TaskName">Task:</label>
+    <input asp-for="TaskName" />
+
+
+    <br />
+    <label asp-for="DueDate">Due Date:</label>
+    <input asp-for="DueDate" />
+
+    <br />
+    <label asp-for="Quadrant">Quadrant:</label>
+    <select asp-for="Quadrant">
+        <option value="">Select a Value</option>
+        <option value="1">Quadrant 1</option>
+        <option value="2">Quadrant 2</option>
+        <option value="3">Quadrant 3</option>
+        <option value="4">Quadrant 4</option>
+    </select>
+
+    <br />
+    <label asp-for="Category">Category:</label>
+    <select asp-for="Category">
+        <option value="">Select</option>
+        <option value="Home">Home</option>
+        <option value="School">School</option>
+        <option value="Work">Work</option>
+        <option value="Church">Church</option>
+    </select>
+
+    <br />
+    <label asp-for="CompletionStatus">Completed?:</label>
+    <select asp-for="CompletionStatus">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
+
+    <button class="btn-info" type="submit">Add your task</button>
+</form>
