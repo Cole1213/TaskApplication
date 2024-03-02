@@ -1,24 +1,23 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@{
-}
+@model TaskApplication.Models.Task
 
 <body>
     <div class="container">
         <h1>Task Manager</h1>
         <form>
             <div class="form-group">
-                <label for="task">Task <span class="required">*</span></label>
-                <input type="text" class="form-control" id="task" name="task" required>
+                <label asp-for="TaskName">Task <span class="required">*</span></label>
+                <input type="text" class="form-control" asp-for="TaskName" required>
             </div>
             <div class="form-group">
-                <label for="due-date">Due Date</label>
-                <input type="date" class="form-control" id="due-date" name="due-date">
+                <label asp-for="DueDate">Due Date</label>
+                <input type="date" class="form-control" asp-for="DueDate">
             </div>
             <div class="form-group">
-                <label for="quadrant">Quadrant <span class="required">*</span></label>
-                <select class="form-control" id="quadrant" name="quadrant">
+                <label asp-for="Quadrant">Quadrant <span class="required">*</span></label>
+                <select class="form-control" asp-for="Quadrant">
                     <option value="1">Quadrant 1 - Urgent</option>
                     <option value="2">Quadrant 2 - Not Urgent</option>
                     <option value="3">Quadrant 3 - Not Important</option>
@@ -26,8 +25,8 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="category">Category</label>
-                <select class="form-control" id="category" name="category">
+                <label asp-for="Category">Category</label>
+                <select class="form-control" asp-for="Category">
                     <option value="home">Home</option>
                     <option value="school">School</option>
                     <option value="work">Work</option>
@@ -35,8 +34,8 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="completed">Completed</label>
-                <select class="form-control" id="completed" name="completed">
+                <label asp-for="CompletionStatus">Completed</label>
+                <select class="form-control" asp-for="CompletionStatus">
                     <option value="true">True</option>
                     <option value="false">False</option>
                 </select>
