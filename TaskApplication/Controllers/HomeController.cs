@@ -30,8 +30,7 @@ namespace TaskApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                //_context.Movies.Add(response);
-                //_context.SaveChanges();
+                _repo.AddTask(response);
 
                 return RedirectToAction("Index");
             }
@@ -39,7 +38,7 @@ namespace TaskApplication.Controllers
             {
                 //ViewBag.Categories = _context.Categories.ToList();
 
-                return View(response);
+                return View("TaskApplication", response);
             }
         }
     }
