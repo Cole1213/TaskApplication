@@ -11,8 +11,8 @@ using TaskApplication.Models;
 namespace TaskApplication.Migrations
 {
     [DbContext(typeof(TaskContext))]
-    [Migration("20240302044405_Initial")]
-    partial class Initial
+    [Migration("20240302050024_OhMyHeck")]
+    partial class OhMyHeck
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
