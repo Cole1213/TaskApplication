@@ -31,6 +31,8 @@ namespace TaskApplication.Controllers
         [HttpGet]
         public IActionResult FillTaskApplication()
         {
+            ViewBag.Categories = _repo.Categories.ToList();
+
             return View("TaskApplication");
         }
 
