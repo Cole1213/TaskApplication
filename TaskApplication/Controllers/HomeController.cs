@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using System.Security.Claims;
 using TaskApplication.Models;
 
 namespace TaskApplication.Controllers
@@ -48,6 +49,24 @@ namespace TaskApplication.Controllers
 
                 return View("TaskApplication", response);
             }
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int Id)
+        {
+            var recordToEdit = _repo.Tasks.Single(x => x.TaskID == Id);
+
+            ViewBag.Categories = _repo.Categories.ToList();
+
+            return View("TaskApplication", recordToEdit);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Models.Task updatedInfo)
+        {
+            _repo.UpdateTask(updatedInfo);
+
+            return RedirectToAction("Index");
         }
     }
 }
