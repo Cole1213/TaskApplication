@@ -16,6 +16,14 @@ namespace TaskApplication.Controllers
         }
         public IActionResult Index()
         {
+            ViewBag.Categories = _repo.Categories.OrderBy(x => x.CategoryID).ToList();
+            ViewBag.Q1 = _repo.Tasks.Where(x => x.Quadrant == 1 & x.CompletionStatus == false).ToList();
+            ViewBag.Q2 = _repo.Tasks.Where(x => x.Quadrant == 2 & x.CompletionStatus == false).ToList();
+            ViewBag.Q3 = _repo.Tasks.Where(x => x.Quadrant == 3 & x.CompletionStatus == false).ToList();
+            ViewBag.Q4 = _repo.Tasks.Where(x => x.Quadrant == 4 & x.CompletionStatus == false).ToList();
+
+            //var tasks = _repo.Tasks.Where(x => x.CompletionStatus == false).OrderBy(x => x.TaskID).ToList();
+
             return View();
         }
 

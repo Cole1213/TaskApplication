@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model TaskApplication.Models.Task
 
 <div class="text-end my-3">
     <a asp-controller="Home" asp-action="FillTaskApplication" class="btn btn-primary">Add Task</a>
@@ -16,11 +17,21 @@
                 <span class="quadrant-number">1</span> URGENT
             </div>
             <div class="quadrant-content">
-                <ul>
-                    <li>crises</li>
-                    <li>emergencies</li>
-                    <!-- ... other items ... -->
-                </ul>
+                <tr>
+                    @foreach(TaskApplication.Models.Task t in ViewBag.Q1)
+                    {
+                        <td>@t.TaskName</td>
+                        <td>
+                            <a class="edit-btn" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskID">Edit</a>
+                        </td>
+                        <td>
+                            <a class="delete-btn" asp-controller="Home" asp-action="Delete" asp-route-id="@t.TaskID">Delete</a>
+                        </td>
+                        <td>
+                            <a class="complete-btn" asp-controller="Home" asp-action="Complete" asp-route-id="@t.TaskID">Complete</a>
+                        </td>
+                    }
+                </tr>
             </div>
         </div>
         <div class="col-6 quadrant urgent">
@@ -28,11 +39,21 @@
                 <span class="quadrant-number">2</span> NOT URGENT
             </div>
             <div class="quadrant-content">
-                <ul>
-                    <li>preparation, planning</li>
-                    <li>relationship building</li>
-                    <!-- ... other items ... -->
-                </ul>
+                <tr>
+                    @foreach (TaskApplication.Models.Task t in ViewBag.Q2)
+                    {
+                        <td>@t.TaskName</td>
+                        <td>
+                            <a class="edit-btn" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskID">Edit</a>
+                        </td>
+                        <td>
+                            <a class="delete-btn" asp-controller="Home" asp-action="Delete" asp-route-id="@t.TaskID">Delete</a>
+                        </td>
+                        <td>
+                            <a class="complete-btn" asp-controller="Home" asp-action="Complete" asp-route-id="@t.TaskID">Complete</a>
+                        </td>
+                    }
+                </tr>
             </div>
         </div>
     </div>
@@ -42,11 +63,21 @@
                 <span class="quadrant-number">3</span> NOT IMPORTANT
             </div>
             <div class="quadrant-content">
-                <ul>
-                    <li>interruptions</li>
-                    <li>some mail</li>
-                    <!-- ... other items ... -->
-                </ul>
+                <tr>
+                    @foreach (TaskApplication.Models.Task t in ViewBag.Q3)
+                    {
+                        <td>@t.TaskName</td>
+                        <td>
+                            <a class="edit-btn" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskID">Edit</a>
+                        </td>
+                        <td>
+                            <a class="delete-btn" asp-controller="Home" asp-action="Delete" asp-route-id="@t.TaskID">Delete</a>
+                        </td>
+                        <td>
+                            <a class="complete-btn" asp-controller="Home" asp-action="Complete" asp-route-id="@t.TaskID">Complete</a>
+                        </td>
+                    }
+                </tr>
             </div>
         </div>
         <div class="col-6 quadrant not-urgent">
@@ -54,11 +85,21 @@
                 <span class="quadrant-number">4</span> NOT URGENT
             </div>
             <div class="quadrant-content">
-                <ul>
-                    <li>trivial activities</li>
-                    <li>time wasters</li>
-                    <!-- ... other items ... -->
-                </ul>
+                <tr>
+                    @foreach (TaskApplication.Models.Task t in ViewBag.Q4)
+                    {
+                        <td>@t.TaskName</td>
+                        <td>
+                            <a class="edit-btn" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskID">Edit</a>
+                        </td>
+                        <td>
+                            <a class="delete-btn" asp-controller="Home" asp-action="Delete" asp-route-id="@t.TaskID">Delete</a>
+                        </td>
+                        <td>
+                            <a class="complete-btn" asp-controller="Home" asp-action="Complete" asp-route-id="@t.TaskID">Complete</a>
+                        </td>
+                    }
+                </tr>
             </div>
         </div>
     </div>
@@ -68,7 +109,7 @@
 @section Styles {
     <style>
         .matrix-container {
-            max-width: 600px;
+            max-width: 80%;
             margin: auto;
         }
 
