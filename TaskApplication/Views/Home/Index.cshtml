@@ -17,21 +17,23 @@
                 <span class="quadrant-number">1</span> URGENT
             </div>
             <div class="quadrant-content">
-                <tr>
-                    @foreach(TaskApplication.Models.Task t in ViewBag.Q1)
+                <table class="task-table">
+                    @foreach (TaskApplication.Models.Task t in ViewBag.Q1)
                     {
-                        <td>@t.TaskName</td>
-                        <td>
-                            <a class="edit-btn" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskID">Edit</a>
-                        </td>
-                        <td>
-                            <a class="delete-btn" asp-controller="Home" asp-action="Delete" asp-route-id="@t.TaskID">Delete</a>
-                        </td>
-                        <td>
-                            <a class="complete-btn" asp-controller="Home" asp-action="Complete" asp-route-id="@t.TaskID">Complete</a>
-                        </td>
+                        <tr>
+                            <td>@t.TaskName</td>
+                            <td>
+                                <a class="edit-btn" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskID">Edit</a>
+                            </td>
+                            <td>
+                                <a class="delete-btn" asp-controller="Home" asp-action="Delete" asp-route-id="@t.TaskID">Delete</a>
+                            </td>
+                            <td>
+                                <a class="complete-btn" asp-controller="Home" asp-action="Complete" asp-route-id="@t.TaskID">Complete</a>
+                            </td>
+                        </tr>
                     }
-                </tr>
+                </table>
             </div>
         </div>
         <div class="col-6 quadrant urgent">
@@ -39,21 +41,23 @@
                 <span class="quadrant-number">2</span> NOT URGENT
             </div>
             <div class="quadrant-content">
-                <tr>
+                <table class="task-table">
                     @foreach (TaskApplication.Models.Task t in ViewBag.Q2)
                     {
-                        <td>@t.TaskName</td>
-                        <td>
-                            <a class="edit-btn" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskID">Edit</a>
-                        </td>
-                        <td>
-                            <a class="delete-btn" asp-controller="Home" asp-action="Delete" asp-route-id="@t.TaskID">Delete</a>
-                        </td>
-                        <td>
-                            <a class="complete-btn" asp-controller="Home" asp-action="Complete" asp-route-id="@t.TaskID">Complete</a>
-                        </td>
+                        <tr>
+                            <td>@t.TaskName</td>
+                            <td>
+                                <a class="edit-btn" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskID">Edit</a>
+                            </td>
+                            <td>
+                                <a class="delete-btn" asp-controller="Home" asp-action="Delete" asp-route-id="@t.TaskID">Delete</a>
+                            </td>
+                            <td>
+                                <a class="complete-btn" asp-controller="Home" asp-action="Complete" asp-route-id="@t.TaskID">Complete</a>
+                            </td>
+                        </tr>
                     }
-                </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -63,21 +67,23 @@
                 <span class="quadrant-number">3</span> NOT IMPORTANT
             </div>
             <div class="quadrant-content">
-                <tr>
+                <table class="task-table">
                     @foreach (TaskApplication.Models.Task t in ViewBag.Q3)
                     {
-                        <td>@t.TaskName</td>
-                        <td>
-                            <a class="edit-btn" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskID">Edit</a>
-                        </td>
-                        <td>
-                            <a class="delete-btn" asp-controller="Home" asp-action="Delete" asp-route-id="@t.TaskID">Delete</a>
-                        </td>
-                        <td>
-                            <a class="complete-btn" asp-controller="Home" asp-action="Complete" asp-route-id="@t.TaskID">Complete</a>
-                        </td>
+                        <tr>
+                            <td>@t.TaskName</td>
+                            <td>
+                                <a class="edit-btn" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskID">Edit</a>
+                            </td>
+                            <td>
+                                <a class="delete-btn" asp-controller="Home" asp-action="Delete" asp-route-id="@t.TaskID">Delete</a>
+                            </td>
+                            <td>
+                                <a class="complete-btn" asp-controller="Home" asp-action="Complete" asp-route-id="@t.TaskID">Complete</a>
+                            </td>
+                        </tr>
                     }
-                </tr>
+                </table>
             </div>
         </div>
         <div class="col-6 quadrant not-urgent">
@@ -85,21 +91,23 @@
                 <span class="quadrant-number">4</span> NOT URGENT
             </div>
             <div class="quadrant-content">
-                <tr>
+                <table class="task-table">
                     @foreach (TaskApplication.Models.Task t in ViewBag.Q4)
                     {
-                        <td>@t.TaskName</td>
-                        <td>
-                            <a class="edit-btn" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskID">Edit</a>
-                        </td>
-                        <td>
-                            <a class="delete-btn" asp-controller="Home" asp-action="Delete" asp-route-id="@t.TaskID">Delete</a>
-                        </td>
-                        <td>
-                            <a class="complete-btn" asp-controller="Home" asp-action="Complete" asp-route-id="@t.TaskID">Complete</a>
-                        </td>
+                        <tr>
+                                <td>@t.TaskName</td>
+                                <td>
+                                    <a class="edit-btn" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskID">Edit</a>
+                                </td>
+                                <td>
+                                    <a class="delete-btn" asp-controller="Home" asp-action="Delete" asp-route-id="@t.TaskID">Delete</a>
+                                </td>
+                                <td>
+                                    <a class="complete-btn" asp-controller="Home" asp-action="Complete" asp-route-id="@t.TaskID">Complete</a>
+                                </td>
+                        </tr>
                     }
-                </tr>
+                </table>
             </div>
         </div>
     </div>

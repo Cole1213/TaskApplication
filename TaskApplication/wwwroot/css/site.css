@@ -56,3 +56,35 @@ form label {
 .required {
     color: red;
 }
+
+.task-table {
+    width: 100%;
+}
+
+    .task-table td {
+        padding: 10px;
+    }
+
+.edit-btn,
+.delete-btn, .complete-btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.complete-btn {
+    background-color: #00ab66;
+    color: #fff;
+}
