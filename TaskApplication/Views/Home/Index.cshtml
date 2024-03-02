@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@model TaskApplication.Models.Task
+@model List<TaskApplication.Models.Task>
 
 <div class="text-end my-3">
     <a asp-controller="Home" asp-action="FillTaskApplication" class="btn btn-primary">Add Task</a>
@@ -22,6 +22,13 @@
                     {
                         <tr>
                             <td>@t.TaskName</td>
+                            @foreach(TaskApplication.Models.Category x in ViewBag.Categories)
+                            {
+                                if (x.CategoryID == t.CategoryID)
+                                {
+                                    <td>@x.CategoryName</td>
+                                }
+                            }
                             <td>
                                 <a class="edit-btn" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskID">Edit</a>
                             </td>
@@ -46,6 +53,13 @@
                     {
                         <tr>
                             <td>@t.TaskName</td>
+                            @foreach (TaskApplication.Models.Category x in ViewBag.Categories)
+                            {
+                                if (x.CategoryID == t.CategoryID)
+                                {
+                                    <td>@x.CategoryName</td>
+                                }
+                            }
                             <td>
                                 <a class="edit-btn" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskID">Edit</a>
                             </td>
@@ -72,6 +86,13 @@
                     {
                         <tr>
                             <td>@t.TaskName</td>
+                            @foreach (TaskApplication.Models.Category x in ViewBag.Categories)
+                            {
+                                if (x.CategoryID == t.CategoryID)
+                                {
+                                    <td>@x.CategoryName</td>
+                                }
+                            }
                             <td>
                                 <a class="edit-btn" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskID">Edit</a>
                             </td>
@@ -96,6 +117,13 @@
                     {
                         <tr>
                                 <td>@t.TaskName</td>
+                                @foreach (TaskApplication.Models.Category x in ViewBag.Categories)
+                                {
+                                    if (x.CategoryID == t.CategoryID)
+                                    {
+                                        <td>@x.CategoryName</td>
+                                    }
+                                }
                                 <td>
                                     <a class="edit-btn" asp-controller="Home" asp-action="Edit" asp-route-id="@t.TaskID">Edit</a>
                                 </td>

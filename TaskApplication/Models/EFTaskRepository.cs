@@ -19,5 +19,11 @@ namespace TaskApplication.Models
             _taskContext.Tasks.Add(task);
             _taskContext.SaveChanges();
         }
+
+        public void UpdateTask(Task task)
+        {
+            _taskContext.Tasks.Update(task);
+            _taskContext.SaveChanges();
+        }
     }
 }
