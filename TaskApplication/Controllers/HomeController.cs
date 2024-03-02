@@ -84,5 +84,21 @@ namespace TaskApplication.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public IActionResult Complete(int id)
+        {
+            var recordToComplete = _repo.Tasks.Single(y => y.TaskID == id);
+
+            return View(recordToComplete);
+        }
+
+        [HttpPost]
+        public IActionResult Complete(Models.Task task)
+        {
+            _repo.UpdateTask(task);
+
+            return RedirectToAction("Index");
+        }
     }
 }
