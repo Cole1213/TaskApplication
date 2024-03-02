@@ -9,14 +9,14 @@ namespace TaskApplication.Models
         [Key]
         public int TaskID { get; set; }
 
-        public string TaskName { get; set; }
-        public DateTime DueDate { get; set; }
+        public string? TaskName { get; set; }
+        public string? DueDate { get; set; }
 
         public int Quadrant { get; set; }
 
         [ForeignKey("CategoryID")]
         public int CategoryID { get; set; }
 
-        public int CompletionStatus { get; set; }
+        public bool CompletionStatus { get; set; }
     }
 }

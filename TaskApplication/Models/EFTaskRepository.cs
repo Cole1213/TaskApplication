@@ -12,5 +12,11 @@ namespace TaskApplication.Models
         }
 
         public List<Task> Tasks => _taskContext.Tasks.ToList();
+
+        public void AddTask(Task task)
+        {
+            _taskContext.Tasks.Add(task);
+            _taskContext.SaveChanges();
+        }
     }
 }
