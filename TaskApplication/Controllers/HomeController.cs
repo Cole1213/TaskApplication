@@ -10,10 +10,19 @@ namespace TaskApplication.Controllers
         {
             return View();
         }
+
+        [HttpGet]
         public IActionResult FillTaskApplication()
         {
             return View("TaskApplication");
         }
+        
+        [HttpPost]
+        public IActionResult FillTaskApplication(Application response)
+        {
+            return View("AddConfirmation");
+        }
+
 
     }
 }
