@@ -30,16 +30,15 @@ namespace TaskApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                //_context.Movies.Add(response);
-                //_context.SaveChanges();
+                _repo.AddTask(response);
 
                 return RedirectToAction("Index");
             }
             else
             {
-                //ViewBag.Categories = _context.Categories.ToList();
+                ViewBag.Categories = _repo.Categories.ToList();
 
-                return View(response);
+                return View("TaskApplication", response);
             }
         }
     }
