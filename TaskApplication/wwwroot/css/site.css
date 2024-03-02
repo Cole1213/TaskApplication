@@ -20,3 +20,39 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.main form {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    height: 20vh
+}
+
+.main {
+    background-color:white;
+    border-radius:20px;
+    padding:100px;
+    box-shadow: 0px 0px 20px grey;
+}
+button {
+    border-radius:10px;
+    padding:5px;
+    margin-top: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+.full-page {
+    height:80vh;
+    width: 80vw;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.required {
+    color: red;
+}
